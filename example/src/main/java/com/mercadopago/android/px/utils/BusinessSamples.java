@@ -19,8 +19,8 @@ final class BusinessSamples {
     private static final String BUTTON_PRIMARY_NAME = "ButtonPrimaryName";
     private static final String BUTTON_SECONDARY_NAME = "ButtonSecondaryName";
 
-    private static final String DUMMY_MERCHANT_PUBLIC_KEY = "TEST-c6d9b1f9-71ff-4e05-9327-3c62468a23ee";
-    private static final String DUMMY_PREFERENCE_ID = "243962506-0bb62e22-5c7b-425e-a0a6-c22d0f4758a9";
+    private static final String DUMMY_MERCHANT_PUBLIC_KEY = "TEST-2b85324f-35e4-4ad6-a486-1135c621cfae";
+    private static final String DUMMY_PREFERENCE_ID = "161054091-e29b9601-258f-4867-80c0-52304d9f11fd";
 
     private BusinessSamples() {
     }
@@ -69,7 +69,7 @@ final class BusinessSamples {
             .setHelp("Help description!")
             .setReceiptId("123455")
             .setTopFragment(SampleTopFragment.class, args)
-            .setStatementDescription("PEDRO")
+            .setStatementDescription("Malvinas Go")
             .setPaymentMethodVisibility(true)
             .setPrimaryButton(new ExitAction(BUTTON_PRIMARY_NAME, 35))
             .setSecondaryButton(new ExitAction(BUTTON_SECONDARY_NAME, 34))

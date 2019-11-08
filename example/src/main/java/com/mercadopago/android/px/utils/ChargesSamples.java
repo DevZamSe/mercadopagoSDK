@@ -19,8 +19,8 @@ import java.util.Collection;
 
 final class ChargesSamples {
 
-    private static final String PK = "TEST-c6d9b1f9-71ff-4e05-9327-3c62468a23ee";
-    private static final String PREF = "243962506-0bb62e22-5c7b-425e-a0a6-c22d0f4758a9";
+    private static final String PK = "TEST-2b85324f-35e4-4ad6-a486-1135c621cfae";
+    private static final String PREF = "\"161054091-e29b9601-258f-4867-80c0-52304d9f11fd";
 
     private ChargesSamples() {
     }

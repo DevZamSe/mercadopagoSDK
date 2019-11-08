@@ -42,16 +42,14 @@ public final class ExamplesUtils {
     private static final String REQUESTED_CODE_MESSAGE = "Requested code: ";
     private static final String PAYMENT_WITH_STATUS_MESSAGE = "Payment with status: ";
     private static final String RESULT_CODE_MESSAGE = " Result code: ";
-    private static final String DUMMY_PREFERENCE_ID = "243962506-0bb62e22-5c7b-425e-a0a6-c22d0f4758a9";
-    private static final String DUMMY_PREFERENCE_ID_WITH_TWO_ITEMS = "243962506-b6476e8b-a1a4-40cb-bfec-9954bff4a143";
-    private static final String DUMMY_PREFERENCE_ID_ONE_ITEM_WITH_QUANTITY =
-        "243962506-ad5df092-f5a2-4b99-bcc4-7578d6e71849";
-    private static final String DUMMY_PREFERENCE_ID_WITH_ITEM_LONG_TITLE =
-        "243962506-4ddac80d-af86-4a4f-80e3-c4e4735ba200";
-    private static final String DUMMY_PREFERENCE_ID_WITH_DECIMALS = "243962506-ad5df092-f5a2-4b99-bcc4-7578d6e71849";
-    private static final String DUMMY_MERCHANT_PUBLIC_KEY = "TEST-c6d9b1f9-71ff-4e05-9327-3c62468a23ee";
-    public static final String MLB_PUBLIC_KEY = "APP_USR-f3f035a2-d343-4a6f-bd3b-fc3c3cb72416";
-    public static final String MLB_PREFERENCE_ID = "245099733-8771f469-d68e-4863-b8cb-9402e22c6bb2";
+    private static final String DUMMY_PREFERENCE_ID = "161054091-e29b9601-258f-4867-80c0-52304d9f11fd";
+    private static final String DUMMY_PREFERENCE_ID_WITH_TWO_ITEMS = "161054091-e29b9601-258f-4867-80c0-52304d9f11fd";
+    private static final String DUMMY_PREFERENCE_ID_ONE_ITEM_WITH_QUANTITY = "161054091-e29b9601-258f-4867-80c0-52304d9f11fd";
+    private static final String DUMMY_PREFERENCE_ID_WITH_ITEM_LONG_TITLE = "161054091-e29b9601-258f-4867-80c0-52304d9f11fd";
+    private static final String DUMMY_PREFERENCE_ID_WITH_DECIMALS = "161054091-e29b9601-258f-4867-80c0-52304d9f11fd";
+        private static final String DUMMY_MERCHANT_PUBLIC_KEY = "TEST-2b85324f-35e4-4ad6-a486-1135c621cfae";
+    public static final String MLB_PUBLIC_KEY = "APP_USR-0475f99a-82fe-469a-8e2c-7ca8edb680aa";
+    public static final String MLB_PREFERENCE_ID = "161054091-e29b9601-258f-4867-80c0-52304d9f11fd";
 
 
     public static void resolveCheckoutResult(final Activity context, final int requestCode, final int resultCode,
@@ -129,7 +127,7 @@ public final class ExamplesUtils {
     private static CheckoutPreference.Builder getBasePreferenceBuilder() {
         final Item item = new Item.Builder("title", 1, new BigDecimal(10)).setDescription("description").build();
 
-        return new CheckoutPreference.Builder(Sites.ARGENTINA, "a@a.a",
+        return new CheckoutPreference.Builder(Sites.PERU, "a@a.a",
             Collections.singletonList(item));
     }
 

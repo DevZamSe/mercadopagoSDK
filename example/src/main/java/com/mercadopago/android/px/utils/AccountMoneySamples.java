@@ -22,13 +22,13 @@ import static com.mercadopago.android.px.utils.PaymentUtils.getGenericPaymentApp
 
 public final class AccountMoneySamples {
 
-    private static final String MERCHANT_PUBLIC_KEY = "TEST-4763b824-93d7-4ca2-a7f7-93539c3ee5bd";
+    private static final String MERCHANT_PUBLIC_KEY = "TEST-2b85324f-35e4-4ad6-a486-1135c621cfae";
     private static final String ACCOUNT_MONEY_ACCESS_TOKEN =
-        "TEST-3465447741993645-121313-56b9e7f91689a6778c394e89fc94e061-386611132";
-    private static final String ACCOUNT_MONEY_PAYER_EMAIL = "prueba@test_user_84540917@testuser.com";
+        "TEST-6655090400443592-110812-fefbb161681d6a2452d184896e601b2c-161054091";
+    private static final String ACCOUNT_MONEY_PAYER_EMAIL = "brandonboluarte@gmail.com";
     private static final String BUSINESS_PAYMENT_IMAGE_URL =
         "https://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg";
-    private static final String BUSINESS_PAYMENT_TITLE = "¡Listo! Ya le pagaste a Strange Brewing";
+    private static final String BUSINESS_PAYMENT_TITLE = "¡Listo! Ya le pagaste con Malvinas Go";
     private static final String BUSINESS_PAYMENT_BUTTON_NAME = "ButtonSecondaryName";
 
     private AccountMoneySamples() {

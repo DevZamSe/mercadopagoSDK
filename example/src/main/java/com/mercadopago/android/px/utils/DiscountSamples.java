@@ -30,8 +30,8 @@ final class DiscountSamples {
     private static final String BUSINESS_PAYMENT_TITLE = "Title";
     private static final String BUSINESS_PAYMENT_BUTTON_NAME = "ButtonSecondaryName";
 
-    private static final String MERCHANT_DISCOUNT_ID = "77";
-    private static final String MERCHANT_DISCOUNT_CURRENCY = "ARS";
+    private static final String MERCHANT_DISCOUNT_ID = "0";
+    private static final String MERCHANT_DISCOUNT_CURRENCY = "PEN";
 
     private DiscountSamples() {
     }
