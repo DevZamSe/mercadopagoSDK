@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       tools:background="@color/px_colorPrimary"
+       tools:layout_height="match_parent"
+       tools:layout_width="match_parent"
+       tools:orientation="vertical"
+       tools:parentTag="android.widget.LinearLayout">
+
+    <!--Add view switcher, depending on how many elements there are.-->
+
+    <FrameLayout
+        android:id="@+id/items_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.mercadopago.android.px.internal.view.ElementDescriptorView
+            android:id="@+id/bigElementDescriptor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:orientation="vertical"
+            app:px_element_icon_height="@dimen/px_m_height"
+            app:px_element_icon_width="@dimen/px_m_height"
+            app:px_element_title_size="@dimen/px_l_text"
+            app:px_element_title_text_color="@color/px_expressCheckoutTextColor"
+            app:px_element_subtitle_size="@dimen/px_xs_text"
+            app:px_element_subtitle_text_color="@color/px_expressCheckoutTextColor"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"/>
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_marginTop="@dimen/px_s_margin"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/px_xs_margin"
+        android:background="@color/px_expressCheckoutSeparatorLine"/>
+
+
+    <com.mercadopago.android.px.internal.view.AmountDescriptorView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</merge>

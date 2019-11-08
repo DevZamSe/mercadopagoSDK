@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_badge_offset">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/payment_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_s_margin"
+            android:layout_marginLeft="@dimen/px_m_margin"
+            android:layout_marginRight="@dimen/px_m_margin"
+            app:cardCornerRadius="@dimen/px_xs_margin"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="false">
+
+            <com.meli.android.carddrawer.model.CardDrawerView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:card_header_behaviour="responsive"
+                app:card_header_internal_padding="0dp"/>
+
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/px_disabled_badge"
+        android:layout_width="@dimen/px_bigger_badge_size"
+        android:layout_height="@dimen/px_bigger_badge_size"
+        android:layout_gravity="top|end"
+        android:layout_marginRight="@dimen/px_l_alternative_margin"
+        android:layout_marginEnd="@dimen/px_l_alternative_margin"
+        android:src="@drawable/px_badge_warning_shadow"
+        android:visibility="gone"/>
+
+</FrameLayout>

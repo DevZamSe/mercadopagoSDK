@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".internal.features.checkout.CheckoutActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:theme="@style/ToolbarTheme"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/px_expressCheckoutTextColor">
+
+        <com.mercadopago.android.px.internal.view.ElementDescriptorView
+            android:id="@+id/element_descriptor_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/px_m_margin"
+            android:layout_marginEnd="@dimen/px_m_margin"
+            android:background="@color/px_background"
+            android:gravity="start"
+            android:orientation="horizontal"
+            app:px_element_icon_height="@dimen/px_s_height"
+            app:px_element_icon_width="@dimen/px_s_height"
+            app:px_element_subtitle_size="@dimen/px_xs_text"
+            app:px_element_subtitle_text_color="@color/px_expressCheckoutTextColor"
+            app:px_element_title_max_lines="1"
+            app:px_element_title_size="@dimen/px_l_text"
+            app:px_element_title_text_color="@color/px_expressCheckoutTextColor"
+            tools:visibility="visible"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.mercadopago.android.px.internal.view.SummaryView
+        android:id="@+id/summary_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/px_background"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/px_xs_margin"
+        android:paddingLeft="@dimen/px_m_margin"
+        android:paddingRight="@dimen/px_m_margin"
+        app:layout_constraintBottom_toTopOf="@id/labeledSwitch"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <com.mercadopago.android.px.internal.view.LabeledSwitch
+        android:id="@+id/labeledSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/px_m_margin"
+        android:paddingRight="@dimen/px_m_margin"
+        app:layout_constraintBottom_toTopOf="@id/installments_header"
+        app:layout_constraintTop_toBottomOf="@id/summary_view"/>
+
+    <com.mercadopago.android.px.internal.view.PaymentMethodHeaderView
+        android:id="@+id/installments_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/badge_offset"
+        app:layout_constraintTop_toBottomOf="@id/labeledSwitch"/>
+
+    <Space
+        android:id="@+id/badge_offset"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_badge_offset"
+        app:layout_constraintTop_toTopOf="@id/container"/>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.mercadopago.android.px.internal.view.DynamicHeightViewPager
+            android:id="@+id/payment_method_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="500dp"/>
+
+        <com.mercadopago.android.px.internal.view.ScrollingPagerIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:px_spi_dotColor="@color/px_expressCheckoutScrollIndicatorColor"
+            app:px_spi_dotSelectedColor="@color/ui_components_primary_color"/>
+
+        <com.mercadolibre.android.ui.widgets.MeliButton
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_m_margin"
+            android:layout_marginLeft="@dimen/px_m_margin"
+            android:layout_marginRight="@dimen/px_m_margin"
+            android:layout_marginTop="@dimen/px_s_margin"
+            android:text="@string/px_pay"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/installments_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/installments_header"
+        tools:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/exploding_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</android.support.constraint.ConstraintLayout>

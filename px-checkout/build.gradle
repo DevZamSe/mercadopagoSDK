@@ -1,0 +1,45 @@
+apply from:"$rootDir/gradle/base_android_lib.gradle"
+apply from:"$rootDir/gradle/jacoco.gradle"
+apply from:"$rootDir/gradle/static-analysis.gradle"
+apply from:"$rootDir/gradle/deploy_checkout.gradle"
+
+android {
+    defaultConfig {
+        multiDexEnabled true //TODO remove
+    }
+}
+
+dependencies {
+    androidTestImplementation project(':testlib')
+
+    testImplementation "junit:junit:$junit"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+
+    implementation "com.android.support:multidex:$multidex" //TODO remove
+    implementation "com.android.support:cardview-v7:$support_library_version"
+    implementation "com.android.support:recyclerview-v7:$support_library_version"
+    implementation "com.android.support:support-v4:$support_library_version"
+    implementation "com.android.support:appcompat-v7:$support_library_version"
+    implementation "com.android.support:design:$support_library_version"
+    implementation "com.android.support:percent:$support_library_version"
+    implementation "com.android.support:support-annotations:$support_library_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_layout"
+    implementation "com.google.android:flexbox:$flexbox_layout"
+
+    implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+
+    implementation("com.squareup.retrofit2:converter-gson:$retrofit") {
+        exclude group:"com.google.code.gson", module:"gson"
+    }
+    api project(':px-services')
+    implementation project(':px-addons')
+
+    implementation "com.google.code.gson:gson:$gson"
+    implementation "com.squareup.picasso:picasso:$picasso"
+    implementation "com.mercadolibre.android:ui:$meli_ui_lib"
+    implementation "com.mercadolibre.android:carddrawer:$meli_card_drawer"
+    implementation "com.mercadolibre.android.mlbusinesscomponents:mlbusinesscomponents:$mlbusinesscomponents"
+}

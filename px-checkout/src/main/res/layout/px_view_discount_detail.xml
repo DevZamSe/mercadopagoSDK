@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/main_container"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="@dimen/px_m_margin">
+
+    <com.mercadopago.android.px.internal.view.MPTextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|start"
+        android:textColor="@color/ui_meli_black"
+        android:textSize="@dimen/px_xs_text"
+        app:customStyle="semi_bold"
+        tools:text="Tope de descuento $ 250"/>
+
+    <com.mercadopago.android.px.internal.view.MPTextView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/px_xxs_margin"
+        android:textColor="@color/ui_meli_grey"
+        android:textSize="@dimen/px_xs_text"
+        app:customStyle="light"
+        tools:text="Tope disponible para consumir en un único pago. Válido hasta el 1 de agosto de 2019."/>
+
+    <com.mercadopago.android.px.internal.view.MPTextView
+        android:id="@+id/linkText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/px_xxs_margin"
+        android:text="@string/px_terms_and_conditions"
+        android:textColor="@color/ui_components_primary_color"
+        android:textSize="@dimen/ui_fontsize_xxsmall"
+        tools:text="Términos y condiciones"/>
+
+    <View
+        android:id="@+id/px_discount_detail_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/px_s_margin"
+        android:background="@color/px_med_light_gray"/>
+
+    <com.mercadopago.android.px.internal.view.MPTextView
+        android:id="@+id/px_discount_sub_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_s_margin"
+        android:gravity="start"
+        android:text="@string/px_we_apply_the_best_available_discount"
+        android:textColor="@color/ui_meli_grey"
+        android:textSize="@dimen/px_xs_text"
+        app:customStyle="light"/>
+</LinearLayout>

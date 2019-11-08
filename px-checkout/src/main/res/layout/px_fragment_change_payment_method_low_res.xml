@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/payment_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_s_margin"
+        android:layout_marginLeft="@dimen/px_m_margin"
+        android:layout_marginRight="@dimen/px_m_margin"
+        android:layout_marginTop="@dimen/px_badge_offset"
+        app:cardBackgroundColor="@color/px_expressCheckoutChangePaymentMethodColor"
+        app:cardCornerRadius="@dimen/px_xs_margin"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/px_change_payment_method_shape"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="@string/px_card_aspect_ratio_lowres"/>
+
+            <com.mercadolibre.android.ui.widgets.MeliButton
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/px_xxs_margin"
+                app:type="optionPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Agregar nueva tarjeta"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

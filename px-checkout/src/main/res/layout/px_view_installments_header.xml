@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       tools:parentTag="android.widget.FrameLayout">
+
+    <com.mercadopago.android.px.internal.view.TitlePager
+        android:id="@+id/title_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/px_s_margin"
+        android:paddingTop="@dimen/px_s_margin">
+
+        <com.mercadopago.android.px.internal.view.PaymentMethodDescriptorView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/px_m_margin"
+            android:paddingRight="@dimen/px_title_pager_padding_right"
+            android:textSize="@dimen/px_s_text"
+            tools:text="1x $1200 CFT: 0,00%"/>
+
+        <com.mercadopago.android.px.internal.view.PaymentMethodDescriptorView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/px_m_margin"
+            android:paddingRight="@dimen/px_title_pager_padding_right"
+            android:textSize="@dimen/px_s_text"/>
+
+        <com.mercadopago.android.px.internal.view.PaymentMethodDescriptorView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/px_m_margin"
+            android:paddingRight="@dimen/px_title_pager_padding_right"
+            android:textSize="@dimen/px_s_text"/>
+    </com.mercadopago.android.px.internal.view.TitlePager>
+
+    <FrameLayout
+        android:id="@+id/installments_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/px_s_margin">
+
+        <com.mercadopago.android.px.internal.view.MPTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/px_s_margin"
+            android:paddingEnd="@dimen/px_title_pager_padding_right"
+            android:paddingLeft="@dimen/px_m_margin"
+            android:paddingRight="@dimen/px_title_pager_padding_right"
+            android:paddingStart="@dimen/px_m_margin"
+            android:text="@string/px_select_installments_title"
+            android:textColor="@color/px_expressCheckoutInstallmentTitle"
+            android:textSize="@dimen/px_s_text"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_xxxs_height"
+            android:layout_gravity="bottom"
+            android:background="@color/px_expressCheckoutSeparatorLine"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="15dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical|end|right"
+        android:layout_marginEnd="@dimen/px_l_margin"
+        android:layout_marginRight="@dimen/px_l_margin"
+        android:src="@drawable/px_shape_arrow_down"/>
+</merge>

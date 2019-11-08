@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Malvinas Go</string>
+    <string name="api_key">XeYIlsociJHPInGLS31Z-xXuOROEDeZOUR90t-81x8lW</string>
+
+    <string name="json_config_button_text">I have a JSON</string>
+    <string name="start_checkout_from_json">Go to Checkout</string>
+    <string name="title_activity_checkout_example">Our checkout</string>
+    <string name="checkout_title">Quick integration</string>
+    <string name="checkout_description">Just 5 minutes! In that time, you will be testing our checkout in your app.</string>
+    <string name="select_checkout">Select a configuration</string>
+    <string name="lazy">Lazy Sample</string>
+    <string name="continue_label">Continue</string>
+
+    <string name="start_for_wrong">Required response not specified</string>
+
+    <!-- Second factor messages -->
+    <string name="auth_error_password">Incorrect password.</string>
+    <string name="auth_error_password_required">Password is required.</string>
+    <string name="custom_initialize_button">Custom initialize</string>
+    <string name="hint_public_key">Public Key</string>
+    <string name="hint_access_token">Access token</string>
+    <string name="hint_preference_id">Preference Id</string>
+    <string name="clear_label">clear</string>
+</resources>
